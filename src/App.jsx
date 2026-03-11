@@ -17,7 +17,7 @@ export default function App() {
   const [tone, setTone] = useState("Professionnel");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [uses, setUses] = useState(0);
+  const [uses, setUses] = useState(() => parseInt(localStorage.getItem("inkly_uses") || "0", 10));
   const [showPaywall, setShowPaywall] = useState(false);
   const [copied, setCopied] = useState(false);
   const FREE_LIMIT = 3;
@@ -59,7 +59,7 @@ export default function App() {
       } else {
         const text = data.content?.map((b) => b.text || "").join("") || "Aucun contenu généré.";
         setOutput(text);
-        setUses((u) => u + 1);
+        setUses((u) => { const newVal = u + 1; localStorage.setItem("inkly_uses", newVal); return newVal; });
       }
     } catch (e) {
       setOutput("Erreur réseau : " + e.message);
