@@ -191,9 +191,9 @@ export default function App() {
         <div style={{ marginTop:"40px",padding:"28px 32px",background:"rgba(99,217,180,0.05)",border:"1px solid rgba(99,217,180,0.15)",borderRadius:"14px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"20px" }}>
           <div>
             <p style={{ fontFamily:"'Space Mono',monospace",fontSize:"15px",color:"#E8F0F5",marginBottom:"6px" }}>Générations illimitées</p>
-            <p style={{ fontSize:"13px",color:"rgba(255,255,255,0.4)",fontFamily:"'DM Sans',sans-serif" }}>Tous types · Sans engagement · 3€/mois</p>
+            <p style={{ fontSize:"13px",color:"rgba(255,255,255,0.4)",fontFamily:"'DM Sans',sans-serif" }}>Tous types · Sans engagement · 3,99€/mois</p>
           </div>
-          <button className="btn-main" onClick={() => setShowPaywall(true)} style={{ padding:"12px 28px",borderRadius:"10px",fontSize:"14px" }}>
+          <button className="btn-main" onClick={() => window.open('https://buy.stripe.com/cNi14mfsO05pfmh7gBcMM00', '_blank')} style={{ padding:"12px 28px",borderRadius:"10px",fontSize:"14px" }}>
             S'abonner →
           </button>
         </div>
@@ -212,10 +212,10 @@ export default function App() {
               Tu as utilisé tes 3 générations gratuites. Passe à l'offre Pro pour créer sans limite.
             </p>
             <div style={{ background:"rgba(99,217,180,0.07)",borderRadius:"10px",padding:"18px",marginBottom:"24px" }}>
-              <p style={{ fontFamily:"'Space Mono',monospace",fontSize:"26px",color:"#63D9B4" }}>3€ <span style={{ fontSize:"13px",color:"rgba(255,255,255,0.35)" }}>/ mois</span></p>
+              <p style={{ fontFamily:"'Space Mono',monospace",fontSize:"26px",color:"#63D9B4" }}>3,99€ <span style={{ fontSize:"13px",color:"rgba(255,255,255,0.35)" }}>/ mois</span></p>
               <p style={{ fontSize:"12px",color:"rgba(255,255,255,0.3)",marginTop:"4px",fontFamily:"'DM Sans',sans-serif" }}>Générations illimitées · Résiliable à tout moment</p>
             </div>
-            <button className="btn-main" style={{ width:"100%",padding:"14px",borderRadius:"10px",fontSize:"15px",marginBottom:"12px" }}>
+            <button className="btn-main" onClick={() => window.open('https://buy.stripe.com/cNi14mfsO05pfmh7gBcMM00', '_blank')} style={{ width:"100%",padding:"14px",borderRadius:"10px",fontSize:"15px",marginBottom:"12px" }}>
               Commencer maintenant
             </button>
             <button onClick={() => setShowPaywall(false)} style={{ background:"none",border:"none",color:"rgba(255,255,255,0.3)",cursor:"pointer",fontSize:"13px",fontFamily:"'DM Sans',sans-serif" }}>
